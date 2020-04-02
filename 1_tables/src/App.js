@@ -6,26 +6,25 @@ import { configureSequence } from './actions/configureSequence';
 import { saveSequenceDefinition } from './actions/saveSequenceDefinition';
 import { ConfigureForm } from './components/ConfigureForm';
 
-const widths = [20, 30, 40];
-
-export function App({ text, sequences, activeSequence, configureSequence, saveSequenceDefinition }) {
+export function App({ sequenceDefinitions, sequences, activeSequence, configureSequence, saveSequenceDefinition }) {
   const showConfigure = Boolean(activeSequence);
   return (
     <div className="App">
-      { text }
       <section className="tables">
-        { Object.entries(sequences).map(( [sequenceId, seq ], index ) => (
+        { Object.entries(sequences).map(( [sequenceId, seq ]) => (
           <ConfigurableSequenceTable 
-            key={index} 
+            key={sequenceId} 
             sequenceId={sequenceId}
             rows={seq} 
-            width={widths[index]}
+            width={sequenceDefinitions[sequenceId].width}
             onConfigureClick={() => configureSequence(sequenceId)} />))
             }
       </section>
       { showConfigure && 
         <ConfigureForm 
+          key={activeSequence}
           sequenceId={activeSequence} 
+          sequenceDef={sequenceDefinitions[activeSequence]}
           onSubmit={saveSequenceDefinition} />}
     </div>
   );

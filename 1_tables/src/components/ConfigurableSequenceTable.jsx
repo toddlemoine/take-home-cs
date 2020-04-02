@@ -7,7 +7,7 @@ export function ConfigurableSequenceTable({ rows, sequenceId, width, onConfigure
   const styles = { width: widthPercent }
   return (
     <div className="configurable-sequence-table" style={styles} data-sequence-id={sequenceId}>
-      <SequenceTable rows={rows} />
+      <SequenceTable key={sequenceId} rows={rows} />
       <footer>
         <button onClick={onConfigureClick}>Configure</button>
         <div className="width-text">{widthPercent}</div>
