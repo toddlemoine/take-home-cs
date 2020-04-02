@@ -1,12 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
-function App() {
+export function App({ text }) {
   return (
     <div className="App">
-      it works
+      { text }
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => state;
+const mapDispatchToProps = {}; 
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
