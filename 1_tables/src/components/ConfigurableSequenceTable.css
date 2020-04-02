@@ -1,0 +1,26 @@
+.configurable-sequence-table {
+  border: 2px solid #333;
+  padding: .5rem;
+}
+
+.configurable-sequence-table table {
+  width: 100%;
+}
+
+.configurable-sequence-table footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.configurable-sequence-table[data-table-index="0"] {
+  border-color: red;
+}
+
+.configurable-sequence-table[data-table-index="1"] {
+  border-color: green;
+}
+
+.configurable-sequence-table[data-table-index="2"] {
+  border-color: blue;
+}

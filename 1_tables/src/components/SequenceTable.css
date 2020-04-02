@@ -4,5 +4,5 @@
 }
 
 .sequence-table td[disabled] {
-  background: orange;
+  background: #999;
 }
