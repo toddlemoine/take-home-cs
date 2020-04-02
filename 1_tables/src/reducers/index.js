@@ -1,6 +1,7 @@
 import { createSequence } from '../app/createSequence';
 import { CONFIGURE_SEQUENCE } from '../actions/configureSequence';
 import { SAVE_SEQUENCE_DEFINITION } from '../actions/saveSequenceDefinition';
+import { CANCEL_SAVE_SEQUENCE_DEFINITION } from '../actions/cancelSaveSequenceDefinition';
 
 const sequenceDefinitions = {
     red: { start: 8, end: 29, step: 1, switchAfter: 5, width: 20, direction: 'LTR' },
@@ -35,6 +36,8 @@ export const tables = function(state = initialState, action) {
       newState.sequenceDefinitions[sequenceId] = sequenceDefinition;
       newState.sequences[sequenceId] = createSequence(sequenceDefinition);
       return timestamp(newState);
+    case CANCEL_SAVE_SEQUENCE_DEFINITION:
+      return {...state, activeSequence: null }; 
     default:
       return state;
   }

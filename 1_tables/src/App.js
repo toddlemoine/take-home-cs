@@ -4,9 +4,10 @@ import './App.css';
 import { ConfigurableSequenceTable } from './components/ConfigurableSequenceTable';
 import { configureSequence } from './actions/configureSequence';
 import { saveSequenceDefinition } from './actions/saveSequenceDefinition';
+import { cancelSaveSequenceDefinition } from './actions/cancelSaveSequenceDefinition';
 import { ConfigureForm } from './components/ConfigureForm';
 
-export function App({ sequenceDefinitions, sequences, activeSequence, configureSequence, saveSequenceDefinition }) {
+export function App({ sequenceDefinitions, sequences, activeSequence, configureSequence, saveSequenceDefinition, cancelSaveSequenceDefinition }) {
   const showConfigure = Boolean(activeSequence);
   return (
     <div className="App">
@@ -25,12 +26,14 @@ export function App({ sequenceDefinitions, sequences, activeSequence, configureS
           key={activeSequence}
           sequenceId={activeSequence} 
           sequenceDef={sequenceDefinitions[activeSequence]}
-          onSubmit={saveSequenceDefinition} />}
+          onSubmit={saveSequenceDefinition} 
+          onCancel={cancelSaveSequenceDefinition}
+          />}
     </div>
   );
 }
 
 const mapStateToProps = (state) => state;
-const mapDispatchToProps = { configureSequence, saveSequenceDefinition }; 
+const mapDispatchToProps = { configureSequence, saveSequenceDefinition, cancelSaveSequenceDefinition }; 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -20,6 +20,10 @@ export class ConfigureForm extends React.Component {
     super();
     this.form = React.createRef();
   }
+  handleCancel = (e) => {
+    e.preventDefault();
+    this.props.onCancel();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     const { sequenceId, sequenceDef, onSubmit } = this.props;
@@ -63,6 +67,7 @@ export class ConfigureForm extends React.Component {
           </FormRow>
           <FormRow>
             <button onClick={this.handleSubmit}>Save</button>
+            <button onClick={this.handleCancel}>Cancel</button>
           </FormRow>
         </form>
       </div>
