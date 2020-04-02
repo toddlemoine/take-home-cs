@@ -1,6 +1,12 @@
 .sequence-table {
   border: 1px solid black;
   background: #efefef;
+  border-collapse: collapse;
+}
+
+.sequence-table td { 
+  border: 1px solid #666; 
+  padding: .25rem;
 }
 
 .sequence-table td[disabled] {

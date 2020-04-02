@@ -1,8 +1,8 @@
 export const CONFIGURE_SEQUENCE = 'CONFIGURE_SEQUENCE';
 
-export function configureSequence(index) {
+export function configureSequence(sequenceId) {
   return {
     type: CONFIGURE_SEQUENCE,
-    index
+    sequenceId
   };
 }

@@ -13,14 +13,14 @@
   justify-content: space-between;
 }
 
-.configurable-sequence-table[data-table-index="0"] {
+.configurable-sequence-table[data-sequence-id="red"] {
   border-color: red;
 }
 
-.configurable-sequence-table[data-table-index="1"] {
+.configurable-sequence-table[data-sequence-id="green"] {
   border-color: green;
 }
 
-.configurable-sequence-table[data-table-index="2"] {
+.configurable-sequence-table[data-sequence-id="blue"] {
   border-color: blue;
 }
