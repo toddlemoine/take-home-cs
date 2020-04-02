@@ -9,6 +9,13 @@ function isEven(num) {
   return num % 2 === 0;
 }
 
+function padRowWithNulls(row, size) {
+  while (row.length < size) {
+    row.push( null );
+  }
+  return row;
+} 
+
 function switchback(seq, size) {
   const rows = [];
   let curr = 0;
@@ -20,7 +27,13 @@ function switchback(seq, size) {
     curr = end;
   }
   // Switch every odd row
-  const switchedRows = rows.map( (row, index) => isEven(index) ? row : row.reverse() );
+  const switchedRows = rows.map( (row, index) => {
+    if (index === rows.length - 1) {
+      padRowWithNulls(row, size);
+    }
+    return isEven(index) ? row : row.reverse(); 
+  });
+  
   return switchedRows;
 }
 
