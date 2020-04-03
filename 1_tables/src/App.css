@@ -12,3 +12,14 @@
   margin: 0 .25rem;
 }
 
+@media screen and (max-width: 700px) {
+  .configurable-sequence-table[data-sequence-id="blue"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tables {
+    flex-direction: column;
+  }
+}

@@ -39,5 +39,6 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-enzyme": "^7.1.2",
     "serve": "^11.3.0"
-  }
+  },
+  "_homepage": "https://toddllemoine.net/tables-generator"
 }
