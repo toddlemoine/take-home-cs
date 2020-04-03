@@ -22,8 +22,8 @@ npm test
 
 ## Number Generator
 
-All source code and related output is in the 2_number_generator directory.
+All source code and related output is in the 2_numbers directory.
 
 ## SQL Skills
 
-All source code and related output is in the 3_sql_skills directory.
+All source code and related output is in the 3_sql directory.

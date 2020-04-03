@@ -1,0 +1,4 @@
+ name | vehicle_count | pet_count
+------+---------------+-----------
+ Chen |             0 |         2
+ John |             4 |         4
