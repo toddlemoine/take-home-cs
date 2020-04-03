@@ -1,6 +1,14 @@
 .configure-form {
-  background: #ddd;
+  background: #efefef;
   padding: 1rem;
+  width: 350px;
+  font-size: 1.1rem;
+}
+
+.configure-form h2 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
 }
 
 .table-key {

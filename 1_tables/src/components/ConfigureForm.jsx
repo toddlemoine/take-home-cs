@@ -37,7 +37,7 @@ export class ConfigureForm extends React.Component {
     onSubmit(sequenceId, newSequenceDef);
   }
   render() {
-    const { onSubmit, sequenceId, sequenceDef } = this.props;
+    const { sequenceId, sequenceDef } = this.props;
     return (
       <div className="configure-form">
         <h2>Table: <SequenceId color={sequenceId}>{sequenceId}</SequenceId></h2>

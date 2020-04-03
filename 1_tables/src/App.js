@@ -10,7 +10,7 @@ import { ConfigureForm } from './components/ConfigureForm';
 export function App({ sequenceDefinitions, sequences, activeSequence, configureSequence, saveSequenceDefinition, cancelSaveSequenceDefinition }) {
   const showConfigure = Boolean(activeSequence);
   return (
-    <div className="App">
+    <div className="app">
       <section className="tables">
         { Object.entries(sequences).map(( [sequenceId, seq ]) => (
           <ConfigurableSequenceTable 
