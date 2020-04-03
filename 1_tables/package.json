@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +37,7 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "jest-enzyme": "^7.1.2"
+    "jest-enzyme": "^7.1.2",
+    "serve": "^11.3.0"
   }
 }

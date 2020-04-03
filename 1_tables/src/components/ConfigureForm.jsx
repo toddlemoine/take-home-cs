@@ -20,6 +20,14 @@ export class ConfigureForm extends React.Component {
     super();
     this.form = React.createRef();
   }
+  componentDidMount() {
+    this.restoreFocusTo = document.activeElement;
+    const firstInput = this.form.current.querySelector('input');
+    firstInput.focus();
+  }
+  componentWillUnmount() {
+    this.restoreFocusTo.focus();
+  }
   handleCancel = (e) => {
     e.preventDefault();
     this.props.onCancel();
